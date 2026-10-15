@@ -34,7 +34,7 @@ load_dotenv(dotenv_path=env_path)
 
 # Now load environment variables with AutoConfig
 config = AutoConfig(search_path=BASE_DIR)
-BASE_URL = config('BASE_URL', default='http://localhost:8000/')
+BASE_URL = config('BASE_URL')
 AUTH_TOKEN = ""
 
 # Quick-start development settings - unsuitable for production
