@@ -21,10 +21,14 @@ jobs:
         with:
           python-version: "3.11"
 
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install django djangorestframework python-dotenv
+          python -m pip install -r requirements.txt
+
+      - name: Verify decouple installation
+        run: python -c "from decouple import AutoConfig; print('python-decouple installed')"
 
       - name: Run Django checks
         run: python manage.py check
