@@ -34,14 +34,14 @@ load_dotenv(dotenv_path=env_path)
 
 # Now load environment variables with AutoConfig
 config = AutoConfig(search_path=BASE_DIR)
-BASE_URL = config('BASE_URL')
+BASE_URL = config('BASE_URL','http://localhost:8000')
 AUTH_TOKEN = ""
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY','^k@klrn8s7s6mk+7(xzyxzy=kka*+arb-_vhe%e=cr0yu-!$#_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
